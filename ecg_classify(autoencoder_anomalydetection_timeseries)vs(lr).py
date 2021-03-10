@@ -236,7 +236,7 @@ def predict(model, data, threshold):
   loss = tf.keras.losses.mae(reconstructions, data)
   return tf.math.less(loss, threshold)
 
-def print_stats(predictions, labels):
+def print_stats(preds, labels):
   print("Accuracy = {}".format(accuracy_score(labels, preds)))
   print("Precision = {}".format(precision_score(labels, preds)))
   print("Recall = {}".format(recall_score(labels, preds)))
